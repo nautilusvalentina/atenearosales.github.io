@@ -7054,3 +7054,58 @@ body.pagina-servicios .legal-modal-card p {
     min-height: 80px;
   }
 }
+
+/* Contacto: más respiración entre datos y alineación vertical consistente. */
+.contacto-grid {
+  align-items: stretch;
+}
+.contacto-info,
+.contacto-form {
+  align-self: stretch;
+}
+.contacto-items-grid {
+  gap: 8px;
+}
+.contacto-item,
+.contacto-item:nth-child(2),
+.contacto-item:nth-child(4) {
+  padding-block: 22px;
+}
+@media (max-width: 560px) {
+  .contacto-items-grid {
+    gap: 2px;
+  }
+  .contacto-item,
+  .contacto-item:nth-child(2),
+  .contacto-item:nth-child(4) {
+    padding-block: 18px;
+  }
+}
+
+/* Alinea el último dato de contacto con el botón de orientación. */
+@media (min-width: 901px) {
+  .contacto-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .contacto-info .contacto-items-grid {
+    margin-top: auto;
+    margin-bottom: 30px;
+  }
+}
+
+/* Ajuste fino de separación entre secciones sin amontonar el contenido. */
+.contact-extra {
+  padding-top: 60px;
+}
+.portfolio-page .portfolio-cards {
+  margin-top: 36px;
+}
+@media (max-width: 760px) {
+  .contact-extra {
+    padding-top: 48px;
+  }
+  .portfolio-page .portfolio-cards {
+    margin-top: 26px;
+  }
+}
