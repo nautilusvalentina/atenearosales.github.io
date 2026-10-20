@@ -654,16 +654,3 @@ document.addEventListener("DOMContentLoaded", function () {
     if (event.key === "Escape" && modal.classList.contains("is-open")) close();
   });
 });
-
-// Los documentos se abren directamente en Google Viewer con la URL pública de esta publicación.
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("[data-google-pdf-path]").forEach((link) => {
-    const pdfUrl = new URL(link.dataset.googlePdfPath, window.location.href).href;
-    const googleUrl = new URL("https://docs.google.com/gview");
-    googleUrl.searchParams.set("embedded", "true");
-    googleUrl.searchParams.set("url", pdfUrl);
-    link.href = googleUrl.href;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-  });
-});
